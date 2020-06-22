@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (5.2.1)
+  - CCBottomRefreshControl (0.5.2)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+
+DEPENDENCIES:
+  - CCBottomRefreshControl
+  - Kingfisher
+  - Moya (~> 14.0)
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CCBottomRefreshControl
+    - Kingfisher
+    - Moya
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+
+PODFILE CHECKSUM: 1a99579eb86bef4572c1b163caec7840b77e5fef
+
+COCOAPODS: 1.9.1

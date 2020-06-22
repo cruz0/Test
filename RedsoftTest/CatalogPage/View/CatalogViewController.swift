@@ -22,7 +22,7 @@ final class CatalogViewController: UIViewController {
         item.backgroundColor = .white
         item.translatesAutoresizingMaskIntoConstraints = false
         item.alwaysBounceVertical = true
-        item.contentInset = .init(top: flowlayout.minimumLineSpacing, left: 0, bottom: 0, right: 0)
+        item.contentInset = .init(top: flowlayout.minimumLineSpacing, left: 0, bottom: flowlayout.minimumLineSpacing, right: 0)
         item.register(ProductInCatalogCell.self, forCellWithReuseIdentifier: ProductInCatalogCell.reuseId)
         item.keyboardDismissMode = .interactive
         return item

@@ -2,6 +2,10 @@ import UIKit
 import RxSwift
 
 final class AmountButtons: UIStackView {
+    private let disposeBag = DisposeBag()
+    private var basketButton: UIButton!
+    private lazy var amountMode = false
+    
     enum BasketStyle {
         case icon
         case iconWithTitle
@@ -15,8 +19,6 @@ final class AmountButtons: UIStackView {
             basketButton.backgroundColor = color
         }
     }
-    
-    private let disposeBag = DisposeBag()
     
     private var basketIconButton: UIButton {
         let item = UIButton(type: .custom)
@@ -38,7 +40,6 @@ final class AmountButtons: UIStackView {
         item.setInsets(forContentPadding: .init(top: 0, left: 40, bottom: 0, right: 40), imageTitlePadding: -20)
         return item
     }
-    private var basketButton: UIButton!
     
     private lazy var minusButton: UIButton = {
         let item = UIButton(type: .custom)
@@ -73,16 +74,18 @@ final class AmountButtons: UIStackView {
     
     var amount: Int = 0 {
         didSet {
-            setupControls(amountMode: amount > 0)
             amountLabel.text = "\(amount) шт"
+            if amount < 1 {
+                setupControls(amountMode: false)
+            } else if !amountMode && amount > 0 {
+                setupControls(amountMode: true)
+            }
         }
     }
     
     init(basketStyle: BasketStyle) {
         super.init(frame: .zero)
         basketButton = basketStyle == .icon ? basketIconButton : basketIconWithTitleButton
-        
-        setupControls(amountMode: false)
         
         axis = .horizontal
         alignment = .fill
@@ -92,7 +95,6 @@ final class AmountButtons: UIStackView {
             guard let self = self else {return}
             self.amount = 1
             self.amountChanged?(self.amount, true)
-            self.setupControls(amountMode: true)
         }.disposed(by: disposeBag)
         
         plusButton.rx.tap.subscribe {[weak self] _ in
@@ -121,5 +123,6 @@ final class AmountButtons: UIStackView {
         } else {
             addArrangedSubview(basketButton)
         }
+        self.amountMode = amountMode
     }
 }

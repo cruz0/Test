@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6BC3B72245309B9D5E0E72A7 /* Pods_RedsoftTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B007C9B69D438183D01B08 /* Pods_RedsoftTest.framework */; };
+		FA18954924A11D0800613DFD /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18954624A11D0800613DFD /* ServiceManager.swift */; };
+		FA18954A24A11D0800613DFD /* DatabaseBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18954724A11D0800613DFD /* DatabaseBasket.swift */; };
+		FA18954B24A11D0800613DFD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18954824A11D0800613DFD /* DatabaseManager.swift */; };
 		FA2F906D2497B5EE00F5F705 /* ProductInCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F906C2497B5EE00F5F705 /* ProductInCatalogCell.swift */; };
 		FA2F90762498870700F5F705 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F90752498870700F5F705 /* UIColorExt.swift */; };
 		FA2F907A249946DF00F5F705 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F9079249946DF00F5F705 /* ProductViewController.swift */; };
@@ -33,9 +36,6 @@
 		FA2F90B7249EF4FA00F5F705 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F90B6249EF4FA00F5F705 /* ProductData.swift */; };
 		FA2F90BC24A0240500F5F705 /* UIDeviceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F90BB24A0240500F5F705 /* UIDeviceExt.swift */; };
 		FA2F90BE24A0257E00F5F705 /* UILabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F90BD24A0257E00F5F705 /* UILabelExt.swift */; };
-		FA2F90C124A044C900F5F705 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F90C024A044C900F5F705 /* DatabaseManager.swift */; };
-		FA2F90C324A045B300F5F705 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F90C224A045B300F5F705 /* ServiceManager.swift */; };
-		FA2F90C524A0487D00F5F705 /* DatabaseBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F90C424A0487D00F5F705 /* DatabaseBasket.swift */; };
 		FA68B1712497A6830040A6AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68B1702497A6830040A6AC /* AppDelegate.swift */; };
 		FA68B1752497A6830040A6AC /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68B1742497A6830040A6AC /* CatalogViewController.swift */; };
 		FA68B1782497A6830040A6AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA68B1762497A6830040A6AC /* Main.storyboard */; };
@@ -47,6 +47,9 @@
 		2E11C863BD8DDC5257E4089B /* Pods-RedsoftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedsoftTest.release.xcconfig"; path = "Target Support Files/Pods-RedsoftTest/Pods-RedsoftTest.release.xcconfig"; sourceTree = "<group>"; };
 		513F7A07D6C6E90A444ABFED /* Pods-RedsoftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedsoftTest.debug.xcconfig"; path = "Target Support Files/Pods-RedsoftTest/Pods-RedsoftTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B007C9B69D438183D01B08 /* Pods_RedsoftTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedsoftTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA18954624A11D0800613DFD /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		FA18954724A11D0800613DFD /* DatabaseBasket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseBasket.swift; sourceTree = "<group>"; };
+		FA18954824A11D0800613DFD /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		FA2F906C2497B5EE00F5F705 /* ProductInCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInCatalogCell.swift; sourceTree = "<group>"; };
 		FA2F90752498870700F5F705 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		FA2F9079249946DF00F5F705 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
@@ -72,9 +75,6 @@
 		FA2F90B6249EF4FA00F5F705 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		FA2F90BB24A0240500F5F705 /* UIDeviceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExt.swift; sourceTree = "<group>"; };
 		FA2F90BD24A0257E00F5F705 /* UILabelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExt.swift; sourceTree = "<group>"; };
-		FA2F90C024A044C900F5F705 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = RedsoftTest/Ext/DatabaseManager.swift; sourceTree = SOURCE_ROOT; };
-		FA2F90C224A045B300F5F705 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceManager.swift; path = RedsoftTest/Ext/ServiceManager.swift; sourceTree = SOURCE_ROOT; };
-		FA2F90C424A0487D00F5F705 /* DatabaseBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseBasket.swift; path = RedsoftTest/Ext/DatabaseBasket.swift; sourceTree = SOURCE_ROOT; };
 		FA68B16D2497A6830040A6AC /* RedsoftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedsoftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA68B1702497A6830040A6AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA68B1742497A6830040A6AC /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
@@ -257,9 +257,9 @@
 		FA2F90BF24A044B400F5F705 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				FA2F90C024A044C900F5F705 /* DatabaseManager.swift */,
-				FA2F90C224A045B300F5F705 /* ServiceManager.swift */,
-				FA2F90C424A0487D00F5F705 /* DatabaseBasket.swift */,
+				FA18954724A11D0800613DFD /* DatabaseBasket.swift */,
+				FA18954824A11D0800613DFD /* DatabaseManager.swift */,
+				FA18954624A11D0800613DFD /* ServiceManager.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -417,6 +417,7 @@
 			files = (
 				FA68B1752497A6830040A6AC /* CatalogViewController.swift in Sources */,
 				FA2F90882499905300F5F705 /* UIButtonExt.swift in Sources */,
+				FA18954B24A11D0800613DFD /* DatabaseManager.swift in Sources */,
 				FA2F90A9249D858F00F5F705 /* RedsoftDbManager.swift in Sources */,
 				FA2F9097249ADD8A00F5F705 /* CatalogPageViewModel.swift in Sources */,
 				FA2F906D2497B5EE00F5F705 /* ProductInCatalogCell.swift in Sources */,
@@ -427,17 +428,16 @@
 				FA2F90AE249E69B600F5F705 /* RedsoftDbBasket.swift in Sources */,
 				FA2F9090249A974E00F5F705 /* RedsoftService.swift in Sources */,
 				FA2F90B1249EC7E200F5F705 /* ProductPageViewModel.swift in Sources */,
-				FA2F90C524A0487D00F5F705 /* DatabaseBasket.swift in Sources */,
 				FA2F90AC249DACA900F5F705 /* Storage.swift in Sources */,
-				FA2F90C324A045B300F5F705 /* ServiceManager.swift in Sources */,
 				FA2F908C249A368700F5F705 /* Product.swift in Sources */,
 				FA2F9092249AD48600F5F705 /* RedsoftServiceManager.swift in Sources */,
 				FA2F90762498870700F5F705 /* UIColorExt.swift in Sources */,
 				FA2F908024995EA200F5F705 /* CatalogInfoView.swift in Sources */,
+				FA18954A24A11D0800613DFD /* DatabaseBasket.swift in Sources */,
 				FA2F90BC24A0240500F5F705 /* UIDeviceExt.swift in Sources */,
 				FA2F90BE24A0257E00F5F705 /* UILabelExt.swift in Sources */,
+				FA18954924A11D0800613DFD /* ServiceManager.swift in Sources */,
 				FA2F90842499609400F5F705 /* AmountButtons.swift in Sources */,
-				FA2F90C124A044C900F5F705 /* DatabaseManager.swift in Sources */,
 				FA2F9094249AD62700F5F705 /* ProductsData.swift in Sources */,
 				FA2F909C249B0F9200F5F705 /* ProductViewModel.swift in Sources */,
 				FA2F907A249946DF00F5F705 /* ProductViewController.swift in Sources */,

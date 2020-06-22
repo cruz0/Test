@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-final class AmountButtons: UIStackView {
+final class AmountButtons: UIView {
     private let disposeBag = DisposeBag()
     private var basketButton: UIButton!
     private lazy var amountMode = false
@@ -9,15 +9,6 @@ final class AmountButtons: UIStackView {
     enum BasketStyle {
         case icon
         case iconWithTitle
-    }
-    
-    var color: UIColor? {
-        didSet {
-            minusButton.backgroundColor = color
-            plusButton.backgroundColor = color
-            amountLabel.backgroundColor = color
-            basketButton.backgroundColor = color
-        }
     }
     
     private var basketIconButton: UIButton {
@@ -45,9 +36,6 @@ final class AmountButtons: UIStackView {
         let item = UIButton(type: .custom)
         item.setTitle("-", for: .normal)
         item.titleLabel?.adjustsFontSizeToFitDevice()
-        item.clipsToBounds = true
-        item.layer.cornerRadius = 4
-        item.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
         return item
     }()
     
@@ -55,9 +43,6 @@ final class AmountButtons: UIStackView {
         let item = UIButton(type: .custom)
         item.setTitle("+", for: .normal)
         item.titleLabel?.adjustsFontSizeToFitDevice()
-        item.clipsToBounds = true
-        item.layer.cornerRadius = 4
-        item.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         return item
     }()
     
@@ -67,6 +52,15 @@ final class AmountButtons: UIStackView {
         item.adjustsFontSizeToFitDevice()
         item.textColor = .white
         item.textAlignment = .center
+        return item
+    }()
+    
+    private lazy var stack: UIStackView = {
+        let item = UIStackView()
+        item.translatesAutoresizingMaskIntoConstraints = false
+        item.axis = .horizontal
+        item.alignment = .fill
+        item.distribution = .fillEqually
         return item
     }()
     
@@ -87,9 +81,11 @@ final class AmountButtons: UIStackView {
         super.init(frame: .zero)
         basketButton = basketStyle == .icon ? basketIconButton : basketIconWithTitleButton
         
-        axis = .horizontal
-        alignment = .fill
-        distribution = .fillEqually
+        addSubview(stack)
+        stack.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        stack.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        stack.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stack.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         basketButton.rx.tap.subscribe {[weak self] _ in
             guard let self = self else {return}
@@ -114,14 +110,23 @@ final class AmountButtons: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupControls(amountMode: Bool) {
-        arrangedSubviews.forEach { $0.removeFromSuperview() }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        clipsToBounds = true
+        layer.cornerRadius = 4
+    }
+}
+
+//MARK: - Private
+private extension AmountButtons {
+    func setupControls(amountMode: Bool) {
+        stack.arrangedSubviews.forEach { $0.removeFromSuperview() }
         if amountMode {
-            addArrangedSubview(minusButton)
-            addArrangedSubview(amountLabel)
-            addArrangedSubview(plusButton)
+            stack.addArrangedSubview(minusButton)
+            stack.addArrangedSubview(amountLabel)
+            stack.addArrangedSubview(plusButton)
         } else {
-            addArrangedSubview(basketButton)
+            stack.addArrangedSubview(basketButton)
         }
         self.amountMode = amountMode
     }

@@ -41,7 +41,7 @@ final class CatalogInfoView: UIView {
     private(set) lazy var amountButtons: AmountButtons = {
         let item = AmountButtons(basketStyle: .icon)
         item.translatesAutoresizingMaskIntoConstraints = false
-        item.color = UIColor.fromRGB(rgbValue: 0x4050DD)
+        item.backgroundColor = UIColor.fromRGB(rgbValue: 0x4050DD)
         return item
     }()
     

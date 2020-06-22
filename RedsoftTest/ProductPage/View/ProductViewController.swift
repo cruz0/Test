@@ -56,7 +56,7 @@ final class ProductViewController: UIViewController {
     private lazy var amountButtons: AmountButtons = {
         let item = AmountButtons(basketStyle: .iconWithTitle)
         item.translatesAutoresizingMaskIntoConstraints = false
-        item.color = UIColor.fromRGB(rgbValue: 0x4050DD)
+        item.backgroundColor = UIColor.fromRGB(rgbValue: 0x4050DD)
         return item
     }()
     
